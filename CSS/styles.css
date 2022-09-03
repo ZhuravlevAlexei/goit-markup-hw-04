@@ -84,8 +84,8 @@ address {
   padding-bottom: 94px;
 
   /* local tools */
-  /* outline: 2px solid blue;
-  outline-offset: -2px; */
+  outline: 2px solid blue;
+  outline-offset: -2px;
 }
 
 .container {
@@ -98,8 +98,8 @@ address {
   margin-right: auto;
 
   /* local tools */
-  /* outline: 2px solid tomato;
-  outline-offset: -2px; */
+  outline: 2px solid tomato;
+  outline-offset: -2px;
 }
 
 .visually-hidden {
@@ -198,7 +198,17 @@ address {
 
 /* герой */
 .hero {
+  height: 600px;
+  max-width: 1600px;
+
   background-color: var(--background-secondary-cl);
+
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/hero/Img-sq.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -260,6 +270,22 @@ address {
   width: 270px;
   flex-basis: calc((100% - 30px * var(--number-of-gaps-three)) / var(--number-of-items-four));
 }
+
+.special-item::before {
+  display: block;
+  content: '';
+  /* width: 70px; */
+  /* height: 70px; */
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--background-elements);
+
+  outline: 1px solid red;
+}
+
+.special-item.icon-
 
 /* секція "чим займаємось" */
 .section-what {
