@@ -226,7 +226,8 @@ address {
 /* герой */
 .hero {
   height: 600px;
-  min-width: 1600px;
+  max-width: 1600px;
+  margin: 0 auto;
 
   background-color: var(--background-secondary-cl);
 
@@ -347,10 +348,6 @@ address {
   gap: 30px;
 }
 
-.sec-team-list .team-name {
-  padding-bottom: 10px;
-}
-
 .sec-team-item {
   /* width: 270px; */
   flex-basis: calc((100% - 30px * var(--number-of-gaps-three)) / var(--number-of-items-four));
@@ -367,16 +364,14 @@ address {
 
   text-align: center;
   color: var(--main-headers-color);
+  margin-bottom: 10px;
 }
 
 .team-position {
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
-}
-
-.team-position {
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .team-thumb {
@@ -395,12 +390,11 @@ address {
   gap: 10px;
 }
 
-.team-socials-item {
+/* .team-socials-item {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: rgba(255, 255, 2555, 0.1);
   border-radius: 50%;
 }
 
@@ -409,9 +403,10 @@ address {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.1);
+  /* background-color: rgba(0, 0, 0, 0.1); 
   border-radius: 50%;
 }
+ */
 
 .team-socials-link {
   display: flex;
@@ -422,7 +417,7 @@ address {
   height: 44px;
   border-radius: 50%;
 
-  color: var(--main-txt-color);
+  color: var(--icons-color);
 }
 
 .team-socials-link:hover,
@@ -442,12 +437,6 @@ address {
   fill: currentColor;
 }
 
-.cur-tm-soc-lnk,
-.cur-fot-soc-lnk {
-  color: var(--light-txt-color);
-  background-color: var(--main-accent-color);
-}
-
 /* клієнти */
 .section-clients-list {
   display: flex;
@@ -460,7 +449,18 @@ address {
   cursor: pointer;
 }
 
-.sec-clients-item {
+/* .sec-clients-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border-radius: 4px;
+  border: 1px solid var(--icons-color);
+}
+*/
+
+.sec-clients-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -470,13 +470,8 @@ address {
   border: 1px solid var(--icons-color);
 }
 
-.sec-clients-item:hover,
-.sec-clients-item:focus {
-  fill: var(--main-accent-color);
-  border-color: var(--main-accent-color);
-}
-
-.curr-client {
+.sec-clients-link:hover,
+.sec-clients-link:focus {
   fill: var(--main-accent-color);
   border-color: var(--main-accent-color);
 }
@@ -594,7 +589,9 @@ address {
 }
 
 .sec-prg-item:hover {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-name {
